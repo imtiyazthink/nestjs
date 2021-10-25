@@ -81,21 +81,21 @@ describe('PostsController', () => {
   });
 
   /**
-   * Get users
+   * Get Posts
    */
   it('should return all posts', () => {
     expect(controller.findAll()).resolves.toEqual([postsData])
   });
 
   /**
-   * Get user by id
+   * Get Post by id
    */
   it('should return post for the provided post id', () => {
     expect(controller.findOne(postsData.id)).resolves.toEqual(postsData)
   })
 
   /**
-  * Delete user by id
+  * Delete Post by id
   */
   it('should return deleted post for the provided post id', () => {
     expect(controller.delete(postsData.id)).resolves.toEqual(postsData)
